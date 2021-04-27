@@ -1,0 +1,23 @@
+<app-structure-guide iconName="ic_design" [epicComponent]="this" [canMoveDown]="!isLastItem" [canMoveUp]="!isFirstItem" [editMode]="editMode" (deleteClicked)="deleteClicked.emit()" (moveClicked)="moveClicked.emit($event)">
+  <div class="content">
+    <input [disabled]="!editMode" class="epic-component-title" placeholder="Enter a title" [(ngModel)]="component.data.title" type="text" />
+    <div class="image-list" >
+      <div class="image-container">
+        <div class="image-item-container" *ngFor="let image of component.data.images; let i = index;">
+          <img class="image-item" lightbox [src]="image.url" />
+          <div *ngIf="editMode" class="remove-image-button hlist" (click)="removeImage(i)">
+            <img class="mini-icon" src="assets/icon/ic_delete.png">
+          </div>
+        </div>
+        <div [class.zerosize]="!editMode" class="new-item-button new-image-button hlist" (click)="fileInput.click()">
+          <input #fileInput accept="image/x-png,image/gif,image/jpeg" style="display: none;" type='file' (change)="addImage($event)">
+          <img class="mini-icon" style="margin-right: 8pt" src="assets/icon/ic_add.png" />
+          <div class="vlist" style="align-items: start;">
+            <span>Add Image</span>
+            <span style="font-size: 8pt; opacity: 0.65;">Up to 5MB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-structure-guide>

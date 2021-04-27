@@ -1,0 +1,8 @@
+<app-structure-guide iconName="ic_internet" [epicComponent]="this" [canMoveDown]="!isLastItem" [canMoveUp]="!isFirstItem" [editMode]="editMode" (deleteClicked)="deleteClicked.emit()" (moveClicked)="moveClicked.emit($event)">
+  <div class="content">
+    <input [disabled]="!editMode" class="epic-component-title" placeholder="Enter a title" [(ngModel)]="component.data.title" type="text" />
+    <a  [attr.href]="editMode ? null : component.data.url">
+      <input [disabled]="!editMode" placeholder="https://" class="link" [class.edit-mode]="editMode" [class.clickable]="!editMode" [(ngModel)]="component.data.url" type="text" />
+    </a>
+  </div>
+</app-structure-guide>

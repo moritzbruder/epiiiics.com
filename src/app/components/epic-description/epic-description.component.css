@@ -1,0 +1,123 @@
+.desc-rendered ::ng-deep h1 {
+  margin: 4pt 0;
+  font-weight: 500;
+  font-size: 15pt;
+  opacity: .85;
+}
+::ng-deep .CodeMirror .CodeMirror-code .cm-header-1 {
+  font-weight: 500;
+  font-size: 15pt;
+  opacity: .85;
+}
+
+.desc-rendered ::ng-deep h2 {
+  margin: 4pt 0;
+  font-weight: 500;
+  font-size: 14pt;
+  opacity: .75;
+}
+::ng-deep .CodeMirror .CodeMirror-code .cm-header-2 {
+  font-weight: 500;
+  font-size: 14pt;
+  opacity: .75;
+}
+
+.desc-rendered ::ng-deep h3 {
+  margin: 4pt 0;
+  font-weight: 500;
+  font-size: 12pt;
+  opacity: .65;
+}
+::ng-deep .CodeMirror .CodeMirror-code .cm-header-3 {
+  font-weight: 500;
+  font-size: 12pt;
+  opacity: .65;
+}
+
+.desc-rendered ::ng-deep h4 {
+  margin: 4pt 0;
+  font-weight: 500;
+  font-size: 12pt;
+  opacity: .55;
+}
+::ng-deep .CodeMirror .CodeMirror-code .cm-header-4 {
+  font-weight: 500;
+  font-size: 12pt;
+  opacity: .55;
+}
+
+.desc-rendered ::ng-deep h5 {
+  margin: 4pt 4pt;
+  font-weight: 500;
+  font-size: 12pt;
+  opacity: .65;
+}
+::ng-deep .CodeMirror .CodeMirror-code .cm-header-5 {
+  margin: 4pt 4pt;
+  font-weight: 500;
+  font-size: 12pt;
+  opacity: .65;
+}
+
+.desc-rendered ::ng-deep h6 {
+  margin: 4pt 4pt;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 12pt;
+  opacity: .65;
+}
+::ng-deep .CodeMirror .CodeMirror-code .cm-header-6 {
+  margin: 4pt 4pt;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 12pt;
+  opacity: .65;
+}
+
+.desc-rendered ::ng-deep p {
+  margin-top: 0;
+}
+
+.desc-rendered ::ng-deep ul {
+  padding-left: 12pt;
+}
+
+.desc-rendered ::ng-deep {
+  line-height: 20pt;
+}
+
+.editor {
+  position: absolute;
+  min-width: min(500pt, 90vw);
+  transition: all .2s ease-out;
+  top: 0;
+}
+
+.rendered {
+  margin: 0;
+}
+
+.zeroheight {
+  height: 0!important;
+  width: 0;
+  opacity: 0;
+}
+
+.collapse {
+  display: none;
+}
+
+.container {
+  position: relative;
+  transition: all .25s ease-out;
+  min-height: 0;
+  margin-top: 12pt;
+}
+
+.container.tall {
+  min-height: 250pt;
+}
+
+::ng-deep .CodeMirror, .CodeMirror-scroll {
+  height: 200pt;
+}

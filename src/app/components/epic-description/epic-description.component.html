@@ -1,0 +1,10 @@
+<app-structure-guide iconName="ic_text" [epicComponent]="this" [canMoveDown]="!isLastItem" [canMoveUp]="!isFirstItem" [editMode]="editMode" (deleteClicked)="deleteClicked.emit()" (moveClicked)="moveClicked.emit($event)">
+  <div>
+    <input [disabled]="!editMode" class="epic-component-title" placeholder="Enter a title" [(ngModel)]="component.data.title" type="text" />
+    <div class="container" [class.tall]="editMode">
+      <div [class.zeroheight]="editMode" class="desc-rendered" [innerHTML]="component.data.markdown | markdown">
+      </div>
+      <simplemde class="editor" *ngIf="editMode" [(ngModel)]="component.data.markdown" [options]="options"></simplemde>
+    </div>
+  </div>
+</app-structure-guide>

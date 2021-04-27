@@ -1,0 +1,13 @@
+<app-structure-guide iconName="ic_title" [epicComponent]="this" [canMoveDown]="!isLastItem" [canMoveUp]="!isFirstItem" [editMode]="editMode" [removable]="false" (deleteClicked)="deleteClicked.emit()" (moveClicked)="moveClicked.emit($event)">
+  <textarea #titleInput (keydown.enter)="$event.preventDefault()" rows="1" (ngModelChange)="resizeField(titleInput)" [disabled]="!editMode" class="epic-title" placeholder="Enter a name for your epic" [(ngModel)]="epic.title" type="text"></textarea>
+  <div class="description-container" [class.edit-mode]="editMode">
+    <textarea #descriptionField rows="1" [disabled]="!editMode" (ngModelChange)="resizeField(descriptionField)" type="text" class="description-field" [class.edit-mode]="editMode" placeholder="Description (optional)" [(ngModel)]="epic.description"></textarea>
+  </div>
+  <div class="issue-link-container" [class.zeroheight]="!editMode && !epic.issueTrackerLink" >
+    <input type="text" class="attribute-field" [class.inopaque]="!editMode" [class.edit-mode]="editMode" placeholder="Link to Jira, Linear or other issue tracker (optional)" [(ngModel)]="epic.issueTrackerLink" />
+    <div class="issue-tracker-button" [class.edit-mode]="editMode" [class.inopaque]="!epic.issueTrackerLink || editMode">
+      <img class="external-link-icon" src="assets/icon/ic_link.png" />
+      <a class="link-text" [href]="epic.issueTrackerLink">See tickets in {{getTicketAppName()}}</a>
+    </div>
+  </div>
+</app-structure-guide>

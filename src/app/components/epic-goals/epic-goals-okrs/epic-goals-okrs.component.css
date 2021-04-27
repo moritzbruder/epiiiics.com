@@ -1,0 +1,63 @@
+.okr-item {
+  margin-top: 4pt;
+  font-size: 12pt;
+  opacity: 0.5;
+  transition: all .15s ease-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.add-okr-item {
+  margin-top: 8pt;
+  font-size: 12pt;
+  transition: all .15s ease-out;
+}
+
+.okr-item.objective {
+  margin-bottom: 4pt;
+  font-size: 14pt;
+}
+
+.okr-item.highlighted {
+  opacity: 1;
+}
+
+.item-type-indicator {
+  font-size: 12pt;
+  font-weight: 600;
+  width: 20pt;
+  text-align: center;
+  display: inline-block;
+  height: 16pt;
+  flex-shrink: 0;
+}
+
+.item-text {
+  color: #000;
+  margin-left: 8pt;
+  font-family: "Lexend", sans-serif;
+  font-size: 12pt;
+  padding: 0;
+  border: none;
+  background: none;
+  flex-grow: 1;
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 0;
+  resize: none;
+}
+
+.item-text:focus {
+  outline: none;
+}
+
+.content {
+  margin-top: 18pt;
+  margin-bottom: -16pt;
+}
+
+.disabled-link {
+  color: #000;
+  opacity: .35;
+}

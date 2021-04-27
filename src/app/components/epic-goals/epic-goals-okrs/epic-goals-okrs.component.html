@@ -1,0 +1,23 @@
+<app-structure-guide iconName="ic_goal" [epicComponent]="this" [canMoveDown]="!isLastItem" [canMoveUp]="!isFirstItem" [editMode]="editMode" (deleteClicked)="deleteClicked.emit()" (moveClicked)="moveClicked.emit($event)">
+  <div class="content">
+
+    <!-- Objective input -->
+    <div class="okr-item objective" [class.highlighted]="component.data.objective.highlighted">
+      <div class="item-type-indicator unselecteable">O</div>
+      <textarea #objectiveInput (keydown.enter)="$event.preventDefault()" rows="1" (ngModelChange)="resizeField(objectiveInput)" [disabled]="!editMode" [class.edit-mode]="editMode" class="item-text" placeholder="Enter your Objective" [(ngModel)]="component.data.objective.text" type="text"></textarea>
+    </div>
+
+    <!-- Key results -->
+    <div class="okr-item" *ngFor="let keyResult of component.data.keyResults; let i = index;" [class.highlighted]="keyResult.highlighted">
+      <div class="item-type-indicator unselecteable" [class.pointer]="editMode" (click)="toggleHighlightWhileEditing(keyResult)">KR</div>
+      <textarea #keyResultInput (keydown.enter)="$event.preventDefault()" rows="1" [(ngModel)]="keyResult.text" (ngModelChange)="resizeField(keyResultInput); reevalCanAddKeyResult()" [disabled]="!editMode" [class.edit-mode]="editMode" class="item-text" placeholder="Enter your Key Result" type="text"></textarea>
+      <img [class.inopaque]="!editMode" src="assets/icon/ic_remove.png" class="mini-icon pointer" (click)="removeKeyResult(i)" style="transition: all .2s ease-in-out;" />
+    </div>
+
+    <!-- Add KR button -->
+    <div class="add-okr-item" [class.inopaque]="!editMode">
+      <div class="item-type-indicator unselecteable"></div>
+      <span class="item-text link-text" [class.disabled-link]="!canAddKeyResult" [class.pointer]="canAddKeyResult" (click)="addKeyResult()">Add Key Result</span>
+    </div>
+  </div>
+</app-structure-guide>

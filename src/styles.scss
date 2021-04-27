@@ -1,0 +1,125 @@
+body {
+  font-family: "Lexend", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+@import "~@angular/material/theming";
+@include mat-core();
+$angular-primary: mat-palette($mat-teal, 500, 100, 900);
+$angular-accent: mat-palette($mat-pink, A200, A100, A400);
+$angular-warn: mat-palette($mat-red);
+$angular-default-theme: mat-light-theme(
+    (
+      color: (
+        primary: $angular-primary,
+        accent: $angular-accent,
+        warn: $angular-warn,
+      ),
+    )
+);
+@include angular-material-theme($angular-default-theme);
+
+$angular-dark-theme: mat-dark-theme(
+    (
+      color: (
+        primary: mat-palette($mat-green, A200, A100, A400),
+        accent: mat-palette($mat-green, A200, A100, A400),
+        warn: $angular-warn,
+      ),
+    )
+);
+.dark-theme {
+  @include angular-material-color($angular-dark-theme);
+}
+
+.link-text {
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none!important;
+  color: #4671EC!important;
+}
+
+
+.epic-component-title {
+  font-weight: 500;
+  font-size: 16pt;
+  margin-bottom: 6pt;
+  margin-top: 18pt;
+  font-family: "Lexend", sans-serif;
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 0;
+}
+
+.epic-component-title:focus {
+  outline: none;
+}
+
+.epic-component-title:disabled {
+  color: black;
+}
+
+.inopaque {
+  opacity: 0;
+  cursor: default;
+  pointer-events: none
+}
+
+.hlist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+.vlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.icon {
+  width: 24pt;
+  height: 24pt;
+}
+
+.mini-icon {
+  width: 16pt;
+  height: 16pt;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.unselecteable {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.new-item-button {
+  background: rgba(70, 113, 236, 0.1);
+  border-radius: 8pt;
+  transition: all .25s ease-out;
+  width: 100pt;
+  height: 140pt;
+  padding: 16pt;
+  cursor: pointer;
+  margin-right: 16pt;
+  margin-bottom: 16pt;
+}
+
+.new-item-button:hover {
+  background: rgba(70, 113, 236, 0.2);
+  box-shadow: 0 0 24px rgba(70, 113, 236, 0.1);
+}
+
+.edit-mode {
+
+}

@@ -1,0 +1,89 @@
+$image_width: 150pt;
+$image_margin: 16pt;
+
+.image-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.image-item-container {
+  position: relative;
+  padding: 0;
+  border-radius: 8pt;
+  margin-right: $image_margin;
+  margin-top: $image_margin / 2;
+  margin-bottom: $image_margin / 2;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 12px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0 12px 0 rgba(0,0,0,0.2);
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.image-item-container:hover {
+  -webkit-box-shadow: 0 0 12px 0 rgba(0,0,0,0.35);
+  box-shadow: 0 0 12px 0 rgba(0,0,0,0.35);
+  transform: translateY(-2pt);
+}
+
+.zerosize {
+  height: 0!important;
+  opacity: 0;
+  margin-bottom: 0;
+  transform: translateY(10pt);
+  cursor: default;
+  pointer-events: none
+}
+
+.image-item {
+  width: $image_width;
+  display: block;
+  min-height: 50pt;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: ($image_width + $image_margin) ($image_width + $image_margin) ($image_width + $image_margin);
+  grid-auto-flow: row;
+  grid-template-rows: masonry;
+  align-items: start;
+}
+
+.image-item-container .remove-image-button {
+  opacity: 0;
+}
+
+.image-item-container:hover .remove-image-button {
+  opacity: 1;
+}
+
+.remove-image-button {
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 24pt;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s ease-out;
+}
+
+.remove-image-button:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.new-image-button {
+  width: $image_width;
+  height: 48pt;
+  padding-right: 24pt;
+  padding-top: 12pt;
+  margin-top: 8pt;
+  padding-bottom: 12pt;
+  box-sizing: border-box;
+  transition: all .2s ease-in-out;
+}

@@ -1,0 +1,25 @@
+<div class="container">
+  <div style="width: 24pt; padding-top: 6pt; flex-shrink: 0;">
+    <div *ngIf="removable && editMode">
+      <img class="mini-icon pointer move-button" src="assets/icon/ic_move_up.png" [class.inopaque]="!canMoveUp" (click)="moveClicked.emit(-1)" />
+      <img class="mini-icon pointer move-button" src="assets/icon/ic_move_down.png" [class.inopaque]="!canMoveDown" (click)="moveClicked.emit(1)" />
+    </div>
+  </div>
+  <div class="icon-line-container">
+    <div class="icon">
+      <img [src]="'/assets/icon/' + iconName + '.png'"/>
+    </div>
+    <div class="delete-button-container" [class.zeroheight]="!removable || !editMode" (click)="deleteClicked.emit()">
+      <img src="assets/icon/ic_delete.png" class="delete-button" />
+      <img src="assets/icon/ic_delete_hover.png" class="delete-button hover-highlight" />
+    </div>
+
+    <div class="structure-line-container">
+      <div [class.zeroheight]="hideLine || (epicComponent.isLastItem && !editMode)" class="structure-line"></div>
+
+    </div>
+  </div>
+  <div class="content-container">
+    <ng-content></ng-content>
+  </div>
+</div>

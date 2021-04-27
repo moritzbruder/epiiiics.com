@@ -1,0 +1,31 @@
+.link {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.75);
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 12pt;
+  width: 100%;
+  font-family: "Lexend", sans-serif;
+  transition: all .2s ease-out;
+  box-sizing: border-box;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link.edit-mode {
+  background: #EEEEEE;
+  border-radius: 6pt;
+  padding: 6pt 12pt;
+}
+
+.link.clickable {
+  color: #4671EC;
+  cursor: pointer;
+}
+
+.link:not(.edit-mode)::placeholder {
+  opacity: 0;
+}
