@@ -21,4 +21,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Design
 
-The application was designed in Sketch, the file can be found in [concept/epiiics.com.sketch](concepts/epiiics.com.sketch)
+The application was designed in Sketch, the file can be found in [concept/epiiics.com.sketch](concept/epiiics.com.sketch)
