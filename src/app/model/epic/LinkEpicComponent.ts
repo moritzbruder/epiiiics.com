@@ -1,5 +1,8 @@
 import {EpicComponent} from './Epic';
 
+/**
+ * A component of an epic that displays a simple weblink.
+ */
 export class LinkEpicComponent extends EpicComponent {
 
   static typeName = 'link';
@@ -7,6 +10,9 @@ export class LinkEpicComponent extends EpicComponent {
 
 }
 
+/**
+ * Component data for LinkEpicComponent. Consists of section title and the actual weblink url.
+ */
 export class EpicLink {
 
   url: string;

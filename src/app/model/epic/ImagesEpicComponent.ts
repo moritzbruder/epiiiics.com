@@ -1,5 +1,8 @@
 import {EpicComponent} from './Epic';
 
+/**
+ * A component of an Epic that shows a number of images.
+ */
 export class ImagesEpicComponent extends EpicComponent {
 
   static typeName = 'images';
@@ -7,6 +10,9 @@ export class ImagesEpicComponent extends EpicComponent {
 
 }
 
+/**
+ * Component Data for ImagesEpicComponent, consists of a section title and a list of EpicImagesImage(s).
+ */
 export class EpicImages {
 
   images: EpicImagesImage[] = [];
@@ -14,8 +20,14 @@ export class EpicImages {
 
 }
 
+/**
+ * Represents a single image to be displayed in a ImagesEpicComponent.
+ */
 export class EpicImagesImage {
 
+  /**
+   * Url to download the image from
+   */
   url: string;
 
   constructor(url: string) {
