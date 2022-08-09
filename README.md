@@ -1,11 +1,11 @@
 # epiiics.com
 
 Epiiics is a small web-app that allows its users to quickly define product epics. The user can create their page by adding components that show text, images, links or goals.
-It's available at [epiiics.com](https://epiiics.com) and built using Angular with Firebase Firestore and Firebase Storage. 
+It's available at [ta-epics.web.app](https://ta-epics.web.app) and built using Angular with Firebase Firestore and Firebase Storage. 
 
 The entire project was designed, built and released over a weekend as part of a personal challenge, learn more in [this LinkedIn post](https://www.linkedin.com/posts/moritzbruder_epiiics-define-and-share-your-engineering-activity-6792484333409107968-F4_Z) or on [Product Hunt](https://www.producthunt.com/posts/epiiics).
 
-A sample site can be found at [epiiics.com/sample](https://epiiics.com/sample)
+A sample site can be found at [ta-epics.web.app/sample](https://ta-epics.web.app/sample)
 
 ![Screenshot](media/screenshot.jpg)
 
